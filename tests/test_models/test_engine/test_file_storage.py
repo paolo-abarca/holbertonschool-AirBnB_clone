@@ -32,6 +32,7 @@ class TestFileStorage(unittest.TestCase):
             obj = all_objs[obj_id]
         self.assertEqual(self.new.to_dict()["id"], obj.to_dict()["id"])
         self.assertEqual(type(all_objs), dict)
+        self.assertTrue(os.path.exists("file.json"))
 
     def test_filestorage_2(self):
         """
@@ -85,6 +86,38 @@ class TestFileStorage(unittest.TestCase):
         all_objs = filestorage.all()
 
         self.assertEqual(type(all_objs), dict)
+
+    def test_filestorage_6(self):
+        """
+        method 6 that tests FileStorage
+        """
+        for all_objs in storage.all().values():
+            string = all_objs
+
+        self.assertTrue(string is all_objs)
+
+    def test_filestorage_7(self):
+        """
+        method 7 that tests FileStorage
+        """
+        os.remove("file.json")
+        self.assertFalse(os.path.exists("file.json"))
+        user = User()
+        user.save()
+
+        self.assertTrue(os.path.exists("file.json"))
+
+    def test_filestorage_8(self):
+        """
+        method 8 that tests FileStorage
+        """
+        os.remove("file.json")
+        user_2 = User()
+        user_2.save()
+        with open("file.json", "r") as f:
+            string_2 = f.read()
+
+            self.assertIn(type(user_2).__name__ + "." + user_2.id, string_2)
 
 
 if __name__ == "__main__":
