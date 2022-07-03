@@ -1,4 +1,4 @@
-<h1 align="center"> <img src="https://drive.google.com/file/d/1-j9II4HkomaYm588hoxZvhFflupJpCHv/view?usp=sharing" width="55px" height="55px"># holbertonschool-AirBnB_clone</h1>
+<h1 align="center"> <img src="https://media1.giphy.com/media/jO2ZYyQ44uuamn8yYO/giphy.gif?cid=790b7611a88feb0f08228a5d07a1239414ea7cd251ba7177&rid=giphy.gif&ct=s" width="55px" height="55px"># holbertonschool-AirBnB_clone</h1>
 
 ## Concepts
 
