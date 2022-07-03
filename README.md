@@ -10,11 +10,11 @@
 
 <h2 align="center">🤩We create a shell to manage our AirBnB objects🤩</h2>
 
-<img align="right" src="https://media4.giphy.com/media/jO2ZYyQ44uuamn8yYO/giphy.gif?cid=790b7611b13e0aa2b32eec1f0797f9efdc46c7c8adad0c38&rid=giphy.gif&ct=s" width="290px" height="290px">
+<img align="right" src="https://media4.giphy.com/media/jO2ZYyQ44uuamn8yYO/giphy.gif?cid=790b7611b13e0aa2b32eec1f0797f9efdc46c7c8adad0c38&rid=giphy.gif&ct=s" width="320px" height="320px">
 
 This is the first step of our first full web application: the AirBnB clone. Our console is able to work in interactive mode but also in non-interactive mode. It main goal is to manage the AirBnB objects. It is capable of creating new objects, retrieving an object from a file, doing operations on objects like counting and computing stats, updating attributes of an object and destroying them.
 
-<h2 align="center">🤔What’s a command interpreter (shell)?🤔</h2>
+# 🤔What’s a command interpreter (shell)?🤔
 
 It is a program that receives commands from a user,
 our console has the following functions:
