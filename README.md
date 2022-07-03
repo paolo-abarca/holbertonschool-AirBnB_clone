@@ -1,11 +1,9 @@
-> # holbertonschool-AirBnB_clone
+<h1 align="center"> <img src="https://drive.google.com/file/d/1-j9II4HkomaYm588hoxZvhFflupJpCHv/view?usp=sharing" width="55px" height="55px"># holbertonschool-AirBnB_clone</h1>
 
 ## Concepts
 
 - [Python packages](https://intranet.hbtn.io/concepts/66)
 - [AirBnB clone](https://intranet.hbtn.io/concepts/74)
-
-<h1 align="left">Hi <img src="https://images.adsttc.com/media/images/5967/cc6d/b22e/38bb/9b00/0094/original/Airbnb_Exported.gif?1499974762" width="55px" height="55px">, I'm fernando Gonzales</h1>
 
 ![](https://images.adsttc.com/media/images/5967/cc6d/b22e/38bb/9b00/0094/original/Airbnb_Exported.gif?1499974762)
 
