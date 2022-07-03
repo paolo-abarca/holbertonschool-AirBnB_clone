@@ -1,12 +1,12 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 <h1 align="center"> AirBnB Clone </h1>
 
+![](https://images.adsttc.com/media/images/5967/cc6d/b22e/38bb/9b00/0094/original/Airbnb_Exported.gif?1499974762)
+
 ## Concepts
 
 - [Python packages](https://intranet.hbtn.io/concepts/66)
 - [AirBnB clone](https://intranet.hbtn.io/concepts/74)
-
-![](https://images.adsttc.com/media/images/5967/cc6d/b22e/38bb/9b00/0094/original/Airbnb_Exported.gif?1499974762)
 
 I know you were waiting for it: it’s here!
 
