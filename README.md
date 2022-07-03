@@ -9,10 +9,10 @@
 	- [Paolo Abarca Garcia](https://github.com/paolo-abarca)
 
 <h2 align="center">🤩We create a shell to manage our AirBnB objects🤩</h2>
---------------------------------------------------------------------------------------------------------------------------------------------
+
 This is the first step in creating our first full web application: the ``AirBnB clone``
 
-<h3 align="center">🤔What’s a command interpreter (shell)?🤔</h3>
+<h2 align="center">🤔What’s a command interpreter (shell)?🤔</h2>
 
 It is a program that receives commands from a user,
 our console has the following functions:
