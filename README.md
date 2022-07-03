@@ -14,6 +14,15 @@
 
 This is the first step of our first full web application: the AirBnB clone. Our console is able to work in interactive mode but also in non-interactive mode. It main goal is to manage the AirBnB objects. It is capable of creating new objects, retrieving an object from a file, doing operations on objects like counting and computing stats, updating attributes of an object and destroying them.
 
+
+
+
+
+
+
+
+
+
 # 🤔What’s a command interpreter (shell)?🤔
 
 It is a program that receives commands from a user,
