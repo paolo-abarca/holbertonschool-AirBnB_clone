@@ -5,7 +5,7 @@
 - [Python packages](https://intranet.hbtn.io/concepts/66)
 - [AirBnB clone](https://intranet.hbtn.io/concepts/74)
 
-![](https://www.portugalist.com/wp-content/uploads/airbnb-logo-big28072403.jpg)
+![](https://drive.google.com/file/d/1nlZpnD4O4sFrVm_RXBXpy1v38dP6vS4K/view?usp=sharing)
 
 I know you were waiting for it: it’s here!
 
