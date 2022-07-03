@@ -1,4 +1,5 @@
-`Language` ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+`Language`
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 <h1 align="center"> AirBnB Clone </h1>
 
 ![](https://images.adsttc.com/media/images/5967/cc6d/b22e/38bb/9b00/0094/original/Airbnb_Exported.gif?1499974762)
