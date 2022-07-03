@@ -59,20 +59,17 @@ class TestFileStorage(unittest.TestCase):
         storage.new(cy)
         storage.new(am)
         storage.new(rv)
-        self.assertIn("BaseModel." + bm.id, storage.all().keys())
-        self.assertIn(bm, storage.all().values())
-        self.assertIn("User." + us.id, storage.all().keys())
-        self.assertIn(us, storage.all().values())
-        self.assertIn("State." + st.id, storage.all().keys())
-        self.assertIn(st, storage.all().values())
-        self.assertIn("Place." + pl.id, storage.all().keys())
-        self.assertIn(pl, storage.all().values())
-        self.assertIn("City." + cy.id, storage.all().keys())
-        self.assertIn(cy, storage.all().values())
-        self.assertIn("Amenity." + am.id, storage.all().keys())
-        self.assertIn(am, storage.all().values())
-        self.assertIn("Review." + rv.id, storage.all().keys())
-        self.assertIn(rv, storage.all().values())
+        storage.save()
+        save_text = ""
+        with open("file.json", "r") as f:
+            save_text = f.read()
+            self.assertIn("BaseModel." + bm.id, save_text)
+            self.assertIn("User." + us.id, save_text)
+            self.assertIn("State." + st.id, save_text)
+            self.assertIn("Place." + pl.id, save_text)
+            self.assertIn("City." + cy.id, save_text)
+            self.assertIn("Amenity." + am.id, save_text)
+            self.assertIn("Review." + rv.id, save_text)
 
 
 if __name__ == "__main__":
