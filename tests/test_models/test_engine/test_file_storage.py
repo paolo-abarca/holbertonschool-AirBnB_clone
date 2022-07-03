@@ -34,6 +34,17 @@ class TestFileStorage(unittest.TestCase):
         self.assertNotEqual(my_filestorage.created_at,
                             my_filestorage.updated_at)
 
+    def test_filestorage_3(self):
+        """
+        method 3 that tests FileStorage
+        """
+        my_filestorage_2 = FileStorage()
+        self.assertTrue(hasattr(my_filestorage_2, "__init__"))
+        self.assertTrue(hasattr(my_filestorage_2, "all"))
+        self.assertTrue(hasattr(my_filestorage_2, "new"))
+        self.assertTrue(hasattr(my_filestorage_2, "save"))
+        self.assertTrue(hasattr(my_filestorage_2, "reload"))
+
 
 if __name__ == "__main__":
     unittest.main()
