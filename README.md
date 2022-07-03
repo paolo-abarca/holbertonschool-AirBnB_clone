@@ -119,7 +119,7 @@ python3 -m unittest discover tests"
 # Ejemplos de uso de **Comandos**
 
 ## 1 - Create
-````
+```
 (hbnb) create <[class]>
 
 ######salida######
@@ -127,42 +127,7 @@ python3 -m unittest discover tests"
 (hbnb) create User
 38f22813-2753-4d42-b37c-57a17f1e4f88
 (hbnb)
-````c
-
-## 2 - all
-
-### Uso 1
-````
-all <class>
-````c
-
-### Uso 2
-````
-<nombre de clase>.all()
-````c
-
-### Output
-````
-(hbnb) User.all()
-["[User] (1aa89e6c-d6f0-4be5-96e8-05636eb60122) {'id': '1aa89e6c-d6f0-4be5-96e8-05636eb60122', 'created_at': datetime.datetime(2022, 7, 2, 23, 4, 16, 460854), 'updated_at': datetime.datetime(2022, 7, 2, 23, 4, 16, 460854), 'first_name': 'John', 'age': '89'}"]
-(hbnb)
-````c
-
-## 3 Show a class instances
-
-````
-(hbnb) show City 07062be7-fd57-4791-88a6-6a78806398c9
-[City] (07062be7-fd57-4791-88a6-6a78806398c9) {'id': '07062be7-fd57-4791-88a6-6a78806398c9', 'created_at': datetime.datetime(2022, 7, 1, 16, 6, 54, 356353), 'updated_at': datetime.datetime(2022, 7, 1, 16, 6, 54, 356365)}
-(hbnb)
-````c
-
-## 3 Show a class instances
-
-````
-(hbnb) show City 07062be7-fd57-4791-88a6-6a78806398c9
-[City] (07062be7-fd57-4791-88a6-6a78806398c9) {'id': '07062be7-fd57-4791-88a6-6a78806398c9', 'created_at': datetime.datetime(2022, 7, 1, 16, 6, 54, 356353), 'updated_at': datetime.datetime(2022, 7, 1, 16, 6, 54, 356365)}
-(hbnb)
-````c
+```
 
 # Authors contact
 
