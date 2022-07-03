@@ -1,4 +1,5 @@
-<h1 align="center"> <img src="https://media1.giphy.com/media/jO2ZYyQ44uuamn8yYO/giphy.gif?cid=790b7611a88feb0f08228a5d07a1239414ea7cd251ba7177&rid=giphy.gif&ct=s" width="100px" height="100px"> # AirBnB Clone </h1>
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+<h1 align="center"> AirBnB Clone </h1>
 
 ## Concepts
 
