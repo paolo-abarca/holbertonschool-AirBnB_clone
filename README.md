@@ -36,7 +36,7 @@ sudo apt install python3.8
 
 ### 2 - Clone the repo on your computer
 ````
-git clone https://github.com/sanei1509/holbertonschool-AirBnB_clone.git
+git clone https://github.com/paolo-abarca/holbertonschool-AirBnB_clone.git
 ````
 
 ### 3 - Execute the console
@@ -166,5 +166,5 @@ all <class>
 
 # Authors contact
 
-[Valentin Repetto - linkedin](https://www.linkedin.com/in/valentin-repetto-6aa6711a0/) <br>
-[Santiago Neira - linkedin](https://www.linkedin.com/in/santiago-neira-4479501b7/)
+[Fernando J. Gonzales Pradinett - linkedin](https://www.linkedin.com/in/fernando-gonzales-pradinett-2879129b/) <br>
+[Paolo Abarca - linkedin](https://www.linkedin.com/in/paolo-abarca/)
