@@ -40,20 +40,13 @@ class TestFileStorage(unittest.TestCase):
         """
         method 3 that tests FileStorage
         """
-        my_filestorage_2 = FileStorage()
-        self.assertTrue(hasattr(my_filestorage_2, "__init__"))
-        self.assertTrue(hasattr(my_filestorage_2, "all"))
-        self.assertTrue(hasattr(my_filestorage_2, "new"))
-        self.assertTrue(hasattr(my_filestorage_2, "save"))
-        self.assertTrue(hasattr(my_filestorage_2, "reload"))
-
-    def test_filestorage_4(self):
-        """
-        method 4 that tests FileStorage
-        """
-        my_filestorage_3 = FileStorage()
-        my_instance = User()
-        self.assertTrue(os.path.exists("file.json"))
+        self.assertEqual(type(storage).__name__, "FileStorage")
+        self.assertEqual(type(FileStorage()), FileStorage)
+        with self.assertRaises(TypeError):
+            FileStorage(None)
+        self.assertEqual(str, type(FileStorage._FileStorage__file_path))
+        self.assertEqual(dict, type(FileStorage._FileStorage__objects))
+        self.assertEqual(type(storage), FileStorage)
 
 
 if __name__ == "__main__":
