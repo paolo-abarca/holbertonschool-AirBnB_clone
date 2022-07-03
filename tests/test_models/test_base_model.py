@@ -6,6 +6,7 @@ import unittest
 from models import storage
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
+from datetime import datetime
 
 
 class TestBase_model(unittest.TestCase):
@@ -46,6 +47,31 @@ class TestBase_model(unittest.TestCase):
 
         self.assertNotEqual(hour_1, hour_2)
         self.assertNotEqual(my_model_2_json, my_model_2_json_2)
+
+    def test_base_model_2(self):
+        """
+        method 2 that tests BaseModel
+        """
+        dict_1 = {'id': '56d43177-cc5f-4d6c-a0c1-e167f8c27337',
+                  'created_at': '2017-09-28T21:03:54.052298',
+                  '__class__': 'BaseModel',
+                  'my_number': 89,
+                  'updated_at': '2017-09-28T21:03:54.052302',
+                  'name': 'My_First_Model'}
+
+        my_model_3 = BaseModel(**dict_1)
+        name = type(my_model_3).__name__
+        format_date = '\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}.\\d{6}'
+        self.assertEqual(name, "BaseModel")
+        self.assertEqual(len(my_model_3.id), 36)
+        self.assertNotEqual(my_model_3.id, None)
+        self.assertIsInstance(my_model_3.id, str)
+        self.assertIsInstance(my_model_3.created_at, datetime)
+        self.assertIsInstance(my_model_3.updated_at, datetime)
+        self.assertRegex(str(my_model_3.created_at), format_date)
+        self.assertRegex(str(my_model_3.updated_at), format_date)
+        self.assertEqual(my_model_3.name, 'My_First_Model')
+        self.assertEqual(my_model_3.my_number, 89)
 
 
 if __name__ == "__main__":
