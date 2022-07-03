@@ -52,7 +52,6 @@ class TestFileStorage(unittest.TestCase):
         """
         method 4 that tests FileStorage
         """
-
         os.remove("file.json")
         basemodel_2 = BaseModel()
         basemodel_2.save()
@@ -61,6 +60,21 @@ class TestFileStorage(unittest.TestCase):
 
             self.assertIn(type(basemodel_2).__name__ +
                           "." + basemodel_2.id, string_2)
+
+    def test_filestorage_5(self):
+        """
+        method 5 that tests FileStorage
+        """
+        self.assertEqual(storage.reload(), None)
+        storage.save()
+        storage.reload()
+        self.new = BaseModel()
+        all_objs = storage.all()
+        for obj_id in all_objs.keys():
+            obj = all_objs[obj_id]
+
+        self.assertEqual(self.new.to_dict()['id'], obj.to_dict()['id'])
+        self.assertTrue(os.path.exists('file.json'))
 
 
 if __name__ == "__main__":
