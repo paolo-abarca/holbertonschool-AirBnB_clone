@@ -146,6 +146,55 @@ class HBNBCommand(cmd.Cmd):
                                         eval(arguments[3]))
                                 value.save()
 
+    def do_BaseModel(self, arg):
+        """
+        retrieve all instances of the BaseModel
+        class using: <class name>.all()
+        """
+        self.do_all("BaseModel")
+
+    def do_User(self, arg):
+        """
+        retrieve all instances of the User
+        class using: <class name>.all()
+        """
+        self.do_all("User")
+
+    def do_State(self, arg):
+        """
+        retrieve all instances of the State
+        class using: <class name>.all()
+        """
+        self.do_all("State")
+
+    def do_City(self, arg):
+        """
+        retrieve all instances of the City
+        class using: <class name>.all()
+        """
+        self.do_all("City")
+
+    def do_Amenity(self, arg):
+        """
+        retrieve all instances of the Amenity
+        class using: <class name>.all()
+        """
+        self.do_all("Amenity")
+
+    def do_Place(self, arg):
+        """
+        retrieve all instances of the Place
+        class using: <class name>.all()
+        """
+        self.do_all("Place")
+
+    def do_Review(self, arg):
+        """
+        retrieve all instances of the Review
+        class using: <class name>.all()
+        """
+        self.do_all("Review")
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
