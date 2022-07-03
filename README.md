@@ -5,8 +5,8 @@
 
 - Name of the project : ``0x00. AirBnB clone - The console``
 - Authors : <br>
- - [Fernando Gonzales Pradinett](https://github.com/gpradinett) <br>
- - [Paolo Abarca Garcia](https://github.com/paolo-abarca)
+	- [Fernando Gonzales Pradinett](https://github.com/gpradinett) <br>
+	- [Paolo Abarca Garcia](https://github.com/paolo-abarca)
 
 ## Concepts
 
