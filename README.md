@@ -1,4 +1,3 @@
-`Language`
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 <h1 align="center"> AirBnB Clone </h1>
 
@@ -6,8 +5,8 @@
 
 - Name of the project : ``0x00. AirBnB clone - The console``
 - Authors : <br>
-[Fernando Gonzales Pradinett](https://github.com/gpradinett) <br>
-[Paolo Abarca Garcia](https://github.com/paolo-abarca)
+ - [Fernando Gonzales Pradinett](https://github.com/gpradinett) <br>
+ - [Paolo Abarca Garcia](https://github.com/paolo-abarca)
 
 ## Concepts
 
