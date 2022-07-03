@@ -146,54 +146,245 @@ class HBNBCommand(cmd.Cmd):
                                         eval(arguments[3]))
                                 value.save()
 
+    def do_count(self, arg):
+        """
+        method that counts all instances of a class
+        """
+        count = 0
+        if arg not in storage.classes():
+            print("** class doesn't exist **")
+
+        else:
+            for key, value in storage.all().items():
+                key_class = key.split(".")
+                if arg in key_class:
+                    count = count + 1
+
+            print(count)
+
     def do_BaseModel(self, arg):
         """
         retrieve all instances of the BaseModel
         class using: <class name>.all()
         """
-        self.do_all("BaseModel")
+        arguments = arg.split(".")
+
+        if arguments[1] == "all()":
+            self.do_all("BaseModel")
+
+        if arguments[1] == "count()":
+            self.do_count("BaseModel")
+
+        else:
+            a = arguments[1].split("(\"")
+            my_arg = a[1].split("\"")
+
+            if a[0] == "show":
+                real_argum = "BaseModel" + " " + my_arg[0]
+                self.do_show(real_argum)
+
+            if a[0] == "destroy":
+                real_argum = "BaseModel" + " " + my_arg[0]
+                self.do_destroy(real_argum)
+
+            else:
+                if a[0] == "update":
+                    real_argum2 = "BaseModel" + " " + my_arg[0] + " "\
+                            + my_arg[2] + " " + "\"" + my_arg[4] + "\""
+
+                    self.do_update(real_argum2)
 
     def do_User(self, arg):
         """
         retrieve all instances of the User
         class using: <class name>.all()
         """
-        self.do_all("User")
+        arguments = arg.split(".")
+
+        if arguments[1] == "all()":
+            self.do_all("User")
+
+        if arguments[1] == "count()":
+            self.do_count("User")
+
+        else:
+            a = arguments[1].split("(\"")
+            my_arg = a[1].split("\"")
+
+            if a[0] == "show":
+                real_argum = "User" + " " + my_arg[0]
+                self.do_show(real_argum)
+
+            if a[0] == "destroy":
+                real_argum = "User" + " " + my_arg[0]
+                self.do_destroy(real_argum)
+
+            else:
+                if a[0] == "update":
+                    real_argum2 = "User" + " " + my_arg[0] + " "\
+                            + my_arg[2] + " " + "\"" + my_arg[4] + "\""
+
+                    self.do_update(real_argum2)
 
     def do_State(self, arg):
         """
         retrieve all instances of the State
         class using: <class name>.all()
         """
-        self.do_all("State")
+        arguments = arg.split(".")
+
+        if arguments[1] == "all()":
+            self.do_all("State")
+
+        if arguments[1] == "count()":
+            self.do_count("State")
+
+        else:
+            a = arguments[1].split("(\"")
+            my_arg = a[1].split("\"")
+
+            if a[0] == "show":
+                real_argum = "State" + " " + my_arg[0]
+                self.do_show(real_argum)
+
+            if a[0] == "destroy":
+                real_argum = "State" + " " + my_arg[0]
+                self.do_destroy(real_argum)
+
+            else:
+                if a[0] == "update":
+                    real_argum2 = "State" + " " + my_arg[0] + " "\
+                            + my_arg[2] + " " + "\"" + my_arg[4] + "\""
+
+                    self.do_update(real_argum2)
 
     def do_City(self, arg):
         """
         retrieve all instances of the City
         class using: <class name>.all()
         """
-        self.do_all("City")
+        arguments = arg.split(".")
+
+        if arguments[1] == "all()":
+            self.do_all("City")
+
+        if arguments[1] == "count()":
+            self.do_count("City")
+
+        else:
+            a = arguments[1].split("(\"")
+            my_arg = a[1].split("\"")
+
+            if a[0] == "show":
+                real_argum = "City" + " " + my_arg[0]
+                self.do_show(real_argum)
+
+            if a[0] == "destroy":
+                real_argum = "City" + " " + my_arg[0]
+                self.do_destroy(real_argum)
+
+            else:
+                if a[0] == "update":
+                    real_argum2 = "City" + " " + my_arg[0] + " "\
+                            + my_arg[2] + " " + "\"" + my_arg[4] + "\""
+
+                    self.do_update(real_argum2)
 
     def do_Amenity(self, arg):
         """
         retrieve all instances of the Amenity
         class using: <class name>.all()
         """
-        self.do_all("Amenity")
+        arguments = arg.split(".")
+
+        if arguments[1] == "all()":
+            self.do_all("Amenity")
+
+        if arguments[1] == "count()":
+            self.do_count("Amenity")
+
+        else:
+            a = arguments[1].split("(\"")
+            my_arg = a[1].split("\"")
+
+            if a[0] == "show":
+                real_argum = "Amenity" + " " + my_arg[0]
+                self.do_show(real_argum)
+
+            if a[0] == "destroy":
+                real_argum = "Amenity" + " " + my_arg[0]
+                self.do_destroy(real_argum)
+
+            else:
+                if a[0] == "update":
+                    real_argum2 = "Amenity" + " " + my_arg[0] + " "\
+                            + my_arg[2] + " " + "\"" + my_arg[4] + "\""
+
+                    self.do_update(real_argum2)
 
     def do_Place(self, arg):
         """
         retrieve all instances of the Place
         class using: <class name>.all()
         """
-        self.do_all("Place")
+        arguments = arg.split(".")
+
+        if arguments[1] == "all()":
+            self.do_all("Place")
+
+        if arguments[1] == "count()":
+            self.do_count("Place")
+
+        else:
+            a = arguments[1].split("(\"")
+            my_arg = a[1].split("\"")
+
+            if a[0] == "show":
+                real_argum = "Place" + " " + my_arg[0]
+                self.do_show(real_argum)
+
+            if a[0] == "destroy":
+                real_argum = "Place" + " " + my_arg[0]
+                self.do_destroy(real_argum)
+
+            else:
+                if a[0] == "update":
+                    real_argum2 = "Place" + " " + my_arg[0] + " "\
+                            + my_arg[2] + " " + "\"" + my_arg[4] + "\""
+
+                    self.do_update(real_argum2)
 
     def do_Review(self, arg):
         """
         retrieve all instances of the Review
         class using: <class name>.all()
         """
-        self.do_all("Review")
+        arguments = arg.split(".")
+
+        if arguments[1] == "all()":
+            self.do_all("Review")
+
+        if arguments[1] == "count()":
+            self.do_count("Review")
+
+        else:
+            a = arguments[1].split("(\"")
+            my_arg = a[1].split("\"")
+
+            if a[0] == "show":
+                real_argum = "Review" + " " + my_arg[0]
+                self.do_show(real_argum)
+
+            if a[0] == "destroy":
+                real_argum = "Review" + " " + my_arg[0]
+                self.do_destroy(real_argum)
+
+            else:
+                if a[0] == "update":
+                    real_argum2 = "Review" + " " + my_arg[0] + " "\
+                            + my_arg[2] + " " + "\"" + my_arg[4] + "\""
+
+                    self.do_update(real_argum2)
 
 
 if __name__ == "__main__":
