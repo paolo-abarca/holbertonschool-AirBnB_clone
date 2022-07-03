@@ -8,13 +8,8 @@
 	- [Fernando Gonzales Pradinett](https://github.com/gpradinett) <br>
 	- [Paolo Abarca Garcia](https://github.com/paolo-abarca)
 
-## Concepts
-
-- [Python packages](https://intranet.hbtn.io/concepts/66)
-- [AirBnB clone](https://intranet.hbtn.io/concepts/74)
-
-# We create a shell to manage our AirBnB objects.
-
+<h3 align="center">🤩We create a shell to manage our AirBnB objects🤩</h3>
+---------------------------------------------------------------------------------------------------------------------
 This is the first step in creating our first full web application: the ``AirBnB clone``
 
 ## What’s a command interpreter (shell)?
