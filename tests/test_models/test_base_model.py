@@ -29,7 +29,7 @@ class TestBase_model(unittest.TestCase):
 
     def test_update_base_model(self):
         """
-
+        method 2 that tests BaseModel update
         """
         my_model_2 = BaseModel()
         my_model_2.name = "My Second Model"
