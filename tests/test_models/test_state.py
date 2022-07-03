@@ -4,6 +4,9 @@ Unittest for class State
 """
 import unittest
 from models.state import State
+from models.base_model import BaseModel
+from datetime import datetime
+import uuid
 
 
 class TestState(unittest.TestCase):
@@ -44,6 +47,18 @@ class TestState(unittest.TestCase):
 
         self.assertNotEqual(hour_1, hour_2)
         self.assertNotEqual(my_state_2_json, my_state_2_json_2)
+
+    def test_state_init(self):
+        """
+        method 3 that tests State init
+        """
+        my_state_3 = State()
+        self.assertIsInstance(my_state_3, BaseModel)
+        self.assertIsInstance(my_state_3.created_at, datetime)
+        self.assertIsInstance(my_state_3.updated_at, datetime)
+        self.assertNotIsInstance(my_state_3.id, uuid.UUID)
+        self.assertIsInstance(my_state_3.id, str)
+        self.assertIsInstance(my_state_3.name, str)
 
 
 if __name__ == "__main__":
