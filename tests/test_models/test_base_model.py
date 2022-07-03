@@ -27,6 +27,26 @@ class TestBase_model(unittest.TestCase):
         self.assertEqual(my_model.my_number, 89)
         self.assertEqual(type(my_model.__dict__), dict)
 
+    def test_update_base_model(self):
+        """
+
+        """
+        my_model_2 = BaseModel()
+        my_model_2.name = "My Second Model"
+        my_model_2.my_number = 90
+        hour_1 = my_model_2.updated_at
+        my_model_2.save()
+        my_model_2_json = my_model_2.to_dict()
+
+        my_model_2.name = "My Second Model 2.0"
+        my_model_2.my_number = 95
+        hour_2 = my_model_2.updated_at
+        my_model_2.save()
+        my_model_2_json_2 = my_model_2.to_dict()
+
+        self.assertNotEqual(hour_1, hour_2)
+        self.assertNotEqual(my_model_2_json, my_model_2_json_2)
+
 
 if __name__ == "__main__":
     unittest.main()
