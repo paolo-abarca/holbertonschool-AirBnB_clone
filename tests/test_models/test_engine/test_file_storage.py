@@ -6,6 +6,8 @@ import unittest
 from models import storage
 from models.engine.file_storage import FileStorage
 from models.base_model import BaseModel
+from models.user import User
+import os
 
 
 class TestFileStorage(unittest.TestCase):
@@ -44,6 +46,14 @@ class TestFileStorage(unittest.TestCase):
         self.assertTrue(hasattr(my_filestorage_2, "new"))
         self.assertTrue(hasattr(my_filestorage_2, "save"))
         self.assertTrue(hasattr(my_filestorage_2, "reload"))
+
+    def test_filestorage_4(self):
+        """
+        method 4 that tests FileStorage
+        """
+        my_filestorage_3 = FileStorage()
+        my_instance = User()
+        self.assertTrue(os.path.exists("file.json"))
 
 
 if __name__ == "__main__":
