@@ -77,10 +77,14 @@ class TestFileStorage(unittest.TestCase):
             self.assertIn("Amenity" + "." + amenity.id, text_save)
             self.assertIn("Review" + "." + review.id, text_save)
 
-    def test_filestorage_4(self):
+    def test_filestorage_5(self):
         """
-        method 4 that tests FileStorage
+        method 5 that tests FileStorage
         """
+        filestorage = FileStorage()
+        all_objs = filestorage.all()
+
+        self.assertEqual(type(all_objs), dict)
 
 
 if __name__ == "__main__":
