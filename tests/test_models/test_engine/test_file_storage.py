@@ -71,34 +71,54 @@ class TestFileStorage(unittest.TestCase):
             self.assertIn("Amenity." + am.id, save_text)
             self.assertIn("Review." + rv.id, save_text)
 
-    def test_filestorage_4(self):
+    def setUp(self):
         """
         method 4 that tests FileStorage
         """
-        bm = BaseModel()
-        us = User()
-        st = State()
-        pl = Place()
-        cy = City()
-        am = Amenity()
-        rv = Review()
-        storage.new(bm)
-        storage.new(us)
-        storage.new(st)
-        storage.new(pl)
-        storage.new(cy)
-        storage.new(am)
-        storage.new(rv)
-        storage.save()
-        storage.reload()
-        objs = FileStorage._FileStorage__objects
-        self.assertIn("BaseModel." + bm.id, objs)
-        self.assertIn("User." + us.id, objs)
-        self.assertIn("State." + st.id, objs)
-        self.assertIn("Place." + pl.id, objs)
-        self.assertIn("City." + cy.id, objs)
-        self.assertIn("Amenity." + am.id, objs)
-        self.assertIn("Review." + rv.id, objs)
+        self.my_model = BaseModel()
+        self.fisto = FileStorage()
+        print("setUp")
+
+    def tearDown(self):
+        """
+        End variable
+        """
+        print("tearDown")
+
+    @classmethod
+    def setUpClass(cls):
+        """
+        Set a Class
+        """
+        print("setUpClass")
+
+    @classmethod
+    def tearDownClass(cls):
+        """
+        Del a Class
+        """
+        print("tearDownClass")
+
+    def test_file_storage_doc(self):
+        """
+        Check the documentation
+        """
+        self.assertIsNotNone(FileStorage.__doc__)
+        self.assertIsNotNone(FileStorage.__init__.__doc__)
+        self.assertIsNotNone(FileStorage.all.__doc__)
+        self.assertIsNotNone(FileStorage.new.__doc__)
+        self.assertIsNotNone(FileStorage.save.__doc__)
+        self.assertIsNotNone(FileStorage.reload.__doc__)
+
+    def test_fiel_storage_exist(self):
+        """
+        Check if methods exists
+        """
+        self.assertTrue(hasattr(self.fisto, "__init__"))
+        self.assertTrue(hasattr(self.fisto, "all"))
+        self.assertTrue(hasattr(self.fisto, "new"))
+        self.assertTrue(hasattr(self.fisto, "save"))
+        self.assertTrue(hasattr(self.fisto, "reload"))
 
 
 if __name__ == "__main__":
