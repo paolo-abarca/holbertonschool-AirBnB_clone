@@ -71,55 +71,6 @@ class TestFileStorage(unittest.TestCase):
             self.assertIn("Amenity." + am.id, save_text)
             self.assertIn("Review." + rv.id, save_text)
 
-    def setUp(self):
-        """
-        method 4 that tests FileStorage
-        """
-        self.my_model = BaseModel()
-        self.fisto = FileStorage()
-        print("setUp")
-
-    def tearDown(self):
-        """
-        End variable
-        """
-        print("tearDown")
-
-    @classmethod
-    def setUpClass(cls):
-        """
-        Set a Class
-        """
-        print("setUpClass")
-
-    @classmethod
-    def tearDownClass(cls):
-        """
-        Del a Class
-        """
-        print("tearDownClass")
-
-    def test_file_storage_doc(self):
-        """
-        Check the documentation
-        """
-        self.assertIsNotNone(FileStorage.__doc__)
-        self.assertIsNotNone(FileStorage.__init__.__doc__)
-        self.assertIsNotNone(FileStorage.all.__doc__)
-        self.assertIsNotNone(FileStorage.new.__doc__)
-        self.assertIsNotNone(FileStorage.save.__doc__)
-        self.assertIsNotNone(FileStorage.reload.__doc__)
-
-    def test_fiel_storage_exist(self):
-        """
-        Check if methods exists
-        """
-        self.assertTrue(hasattr(self.fisto, "__init__"))
-        self.assertTrue(hasattr(self.fisto, "all"))
-        self.assertTrue(hasattr(self.fisto, "new"))
-        self.assertTrue(hasattr(self.fisto, "save"))
-        self.assertTrue(hasattr(self.fisto, "reload"))
-
 
 if __name__ == "__main__":
     unittest.main()
