@@ -7,6 +7,11 @@ from models import storage
 from models.engine.file_storage import FileStorage
 from models.base_model import BaseModel
 from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
 import os
 
 
@@ -40,13 +45,34 @@ class TestFileStorage(unittest.TestCase):
         """
         method 3 that tests FileStorage
         """
-        self.assertEqual(type(storage).__name__, "FileStorage")
-        self.assertEqual(type(FileStorage()), FileStorage)
-        with self.assertRaises(TypeError):
-            FileStorage(None)
-        self.assertEqual(str, type(FileStorage._FileStorage__file_path))
-        self.assertEqual(dict, type(FileStorage._FileStorage__objects))
-        self.assertEqual(type(storage), FileStorage)
+        bm = BaseModel()
+        us = User()
+        st = State()
+        pl = Place()
+        cy = City()
+        am = Amenity()
+        rv = Review()
+        storage.new(bm)
+        storage.new(us)
+        storage.new(st)
+        storage.new(pl)
+        storage.new(cy)
+        storage.new(am)
+        storage.new(rv)
+        self.assertIn("BaseModel." + bm.id, storage.all().keys())
+        self.assertIn(bm, storage.all().values())
+        self.assertIn("User." + us.id, storage.all().keys())
+        self.assertIn(us, storage.all().values())
+        self.assertIn("State." + st.id, storage.all().keys())
+        self.assertIn(st, storage.all().values())
+        self.assertIn("Place." + pl.id, storage.all().keys())
+        self.assertIn(pl, storage.all().values())
+        self.assertIn("City." + cy.id, storage.all().keys())
+        self.assertIn(cy, storage.all().values())
+        self.assertIn("Amenity." + am.id, storage.all().keys())
+        self.assertIn(am, storage.all().values())
+        self.assertIn("Review." + rv.id, storage.all().keys())
+        self.assertIn(rv, storage.all().values())
 
 
 if __name__ == "__main__":
