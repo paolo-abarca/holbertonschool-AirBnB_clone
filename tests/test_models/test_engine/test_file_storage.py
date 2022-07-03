@@ -23,8 +23,14 @@ class TestFileStorage(unittest.TestCase):
         """
         method that tests FileStorage
         """
+        self.assertEqual(storage.reload(), None)
+        storage.save()
+        storage.reload()
+        self.new = BaseModel()
         all_objs = storage.all()
-
+        for obj_id in all_objs.keys():
+            obj = all_objs[obj_id]
+        self.assertEqual(self.new.to_dict()["id"], obj.to_dict()["id"])
         self.assertEqual(type(all_objs), dict)
 
     def test_filestorage_2(self):
@@ -45,31 +51,36 @@ class TestFileStorage(unittest.TestCase):
         """
         method 3 that tests FileStorage
         """
-        bm = BaseModel()
-        us = User()
-        st = State()
-        pl = Place()
-        cy = City()
-        am = Amenity()
-        rv = Review()
-        storage.new(bm)
-        storage.new(us)
-        storage.new(st)
-        storage.new(pl)
-        storage.new(cy)
-        storage.new(am)
-        storage.new(rv)
+        basemodel = BaseModel()
+        storage.new(basemodel)
+        user = User()
+        storage.new(user)
+        state = State()
+        storage.new(state)
+        place = Place()
+        storage.new(place)
+        city = City()
+        storage.new(city)
+        amenity = Amenity()
+        storage.new(amenity)
+        review = Review()
+        storage.new(review)
         storage.save()
-        save_text = ""
+        text_save = ""
         with open("file.json", "r") as f:
-            save_text = f.read()
-            self.assertIn("BaseModel." + bm.id, save_text)
-            self.assertIn("User." + us.id, save_text)
-            self.assertIn("State." + st.id, save_text)
-            self.assertIn("Place." + pl.id, save_text)
-            self.assertIn("City." + cy.id, save_text)
-            self.assertIn("Amenity." + am.id, save_text)
-            self.assertIn("Review." + rv.id, save_text)
+            text_save = f.read()
+            self.assertIn("BaseModel" + "." + basemodel.id, text_save)
+            self.assertIn("User" + "." + user.id, text_save)
+            self.assertIn("State" + "." + state.id, text_save)
+            self.assertIn("Place" + "." + place.id, text_save)
+            self.assertIn("City" + "." + city.id, text_save)
+            self.assertIn("Amenity" + "." + amenity.id, text_save)
+            self.assertIn("Review" + "." + review.id, text_save)
+
+    def test_filestorage_4(self):
+        """
+        method 4 that tests FileStorage
+        """
 
 
 if __name__ == "__main__":
