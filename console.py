@@ -172,7 +172,7 @@ class HBNBCommand(cmd.Cmd):
         if arguments[1] == "all()":
             self.do_all("BaseModel")
 
-        if arguments[1] == "count()":
+        elif arguments[1] == "count()":
             self.do_count("BaseModel")
 
         else:
@@ -183,7 +183,7 @@ class HBNBCommand(cmd.Cmd):
                 real_argum = "BaseModel" + " " + my_arg[0]
                 self.do_show(real_argum)
 
-            if a[0] == "destroy":
+            elif a[0] == "destroy":
                 real_argum = "BaseModel" + " " + my_arg[0]
                 self.do_destroy(real_argum)
 
@@ -204,7 +204,7 @@ class HBNBCommand(cmd.Cmd):
         if arguments[1] == "all()":
             self.do_all("User")
 
-        if arguments[1] == "count()":
+        elif arguments[1] == "count()":
             self.do_count("User")
 
         else:
@@ -215,7 +215,7 @@ class HBNBCommand(cmd.Cmd):
                 real_argum = "User" + " " + my_arg[0]
                 self.do_show(real_argum)
 
-            if a[0] == "destroy":
+            elif a[0] == "destroy":
                 real_argum = "User" + " " + my_arg[0]
                 self.do_destroy(real_argum)
 
@@ -236,7 +236,7 @@ class HBNBCommand(cmd.Cmd):
         if arguments[1] == "all()":
             self.do_all("State")
 
-        if arguments[1] == "count()":
+        elif arguments[1] == "count()":
             self.do_count("State")
 
         else:
@@ -247,7 +247,7 @@ class HBNBCommand(cmd.Cmd):
                 real_argum = "State" + " " + my_arg[0]
                 self.do_show(real_argum)
 
-            if a[0] == "destroy":
+            elif a[0] == "destroy":
                 real_argum = "State" + " " + my_arg[0]
                 self.do_destroy(real_argum)
 
@@ -268,7 +268,7 @@ class HBNBCommand(cmd.Cmd):
         if arguments[1] == "all()":
             self.do_all("City")
 
-        if arguments[1] == "count()":
+        elif arguments[1] == "count()":
             self.do_count("City")
 
         else:
@@ -279,7 +279,7 @@ class HBNBCommand(cmd.Cmd):
                 real_argum = "City" + " " + my_arg[0]
                 self.do_show(real_argum)
 
-            if a[0] == "destroy":
+            elif a[0] == "destroy":
                 real_argum = "City" + " " + my_arg[0]
                 self.do_destroy(real_argum)
 
@@ -300,7 +300,7 @@ class HBNBCommand(cmd.Cmd):
         if arguments[1] == "all()":
             self.do_all("Amenity")
 
-        if arguments[1] == "count()":
+        elif arguments[1] == "count()":
             self.do_count("Amenity")
 
         else:
@@ -311,7 +311,7 @@ class HBNBCommand(cmd.Cmd):
                 real_argum = "Amenity" + " " + my_arg[0]
                 self.do_show(real_argum)
 
-            if a[0] == "destroy":
+            elif a[0] == "destroy":
                 real_argum = "Amenity" + " " + my_arg[0]
                 self.do_destroy(real_argum)
 
@@ -332,7 +332,7 @@ class HBNBCommand(cmd.Cmd):
         if arguments[1] == "all()":
             self.do_all("Place")
 
-        if arguments[1] == "count()":
+        elif arguments[1] == "count()":
             self.do_count("Place")
 
         else:
@@ -343,7 +343,7 @@ class HBNBCommand(cmd.Cmd):
                 real_argum = "Place" + " " + my_arg[0]
                 self.do_show(real_argum)
 
-            if a[0] == "destroy":
+            elif a[0] == "destroy":
                 real_argum = "Place" + " " + my_arg[0]
                 self.do_destroy(real_argum)
 
@@ -364,7 +364,7 @@ class HBNBCommand(cmd.Cmd):
         if arguments[1] == "all()":
             self.do_all("Review")
 
-        if arguments[1] == "count()":
+        elif arguments[1] == "count()":
             self.do_count("Review")
 
         else:
@@ -375,7 +375,7 @@ class HBNBCommand(cmd.Cmd):
                 real_argum = "Review" + " " + my_arg[0]
                 self.do_show(real_argum)
 
-            if a[0] == "destroy":
+            elif a[0] == "destroy":
                 real_argum = "Review" + " " + my_arg[0]
                 self.do_destroy(real_argum)
 
