@@ -118,7 +118,7 @@ echo "python3 -m unittest discover tests" | bash
 python3 -m unittest discover tests"
 ````
 
-# Ejemplos de uso de **Comandos**
+# Examples of use of **Commands** 🍕
 
 ## 1 - Create
 ```
